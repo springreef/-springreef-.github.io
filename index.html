@@ -95,14 +95,147 @@
 <ul>
 <li>使用的软硬件</li>
 </ul>
-<figure class="highlight plain"><figcaption><span>Pro </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">``` Node.js</span><br></pre></td></tr></table></figure>
-<pre><code class="npm">
-</code></pre>
-        
-          <p class="article-more-link">
-            <a href="/2016/05/26/hexo添加博文/#more">Read More</a>
-          </p>
-        
+<figure class="highlight plain"><figcaption><span>Pro </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">``` Node.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt; </span><br><span class="line">## 1. git安装github设置</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p>brew intsall git`                  #Mac</p>
+<p><code>sudo apt-get install git</code>        #Ubuntu</p>
+<p><a href="http://blog.chinaunix.net/uid-26062734-id-1753772.html" target="_blank" rel="external">git操作和github上SSH设置请看这篇博文</a></p>
+<p>使用Github Page搭建博客, 需要遵循一定的规则, 需要在github建立仓库,仓库名为<strong>Github用户</strong>.github.io,例如<a href="springreef.github.io">]springreef.github.i</a>o,更多详情请参考<a href="pages.github.com">官方文档</a></p>
+<h2 id="2-Node-js安装"><a href="#2-Node-js安装" class="headerlink" title="2. Node.js安装"></a>2. Node.js安装</h2><hr>
+<p>mac电脑可以直接通过<a href="brew.sh">brew</a>安装</p>
+<p><code>#安装命令</code></p>
+<p><code>brew install node  #如果我没记错的话,最新版的node.js的包中已经集成了npm包管理工具</code></p>
+<p><code>使用以下命令验证是否安装成功</code></p>
+<p><code>node -v</code></p>
+<p><code>npm -v</code></p>
+<p>Node.js的详细内容请参考<a href="http://www.tuicool.com/articles/6v63eiU" target="_blank" rel="external">Node.js学习笔记</a></p>
+<h2 id="3-Hexo安装与设置"><a href="#3-Hexo安装与设置" class="headerlink" title="3. Hexo安装与设置"></a>3. Hexo安装与设置</h2><hr>
+<p>Node, npm和Git都安装成功, 开始安装hexo,</p>
+<p><code>npm install hexo -g  #-g表示全局安装, npm默认为当前项目安装</code></p>
+<p>Hexo使用命令:</p>
+<p><code>hexo init &lt;folder&gt;  #执行init命令初始化hexo到你指定的目录</code></p>
+<p><code>hexo generate       #自动根据当前目录下文件,生成静态网页</code></p>
+<p><code>hexo server         #运行本地服务,</code></p>
+<p>浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>就可以看到效果。</p>
+<h2 id="4-添加博文"><a href="#4-添加博文" class="headerlink" title="4. 添加博文"></a>4. 添加博文</h2><hr>
+<p><code>hexo new &quot;postName&quot;  #新建博文,其中postName是博文题目</code></p>
+<p>博文会自动生成在博客目录下<em>source/_posts\postName.md</em></p>
+<p><code>#文件自动生成格式:</code></p>
+<p><code>title: &quot;It Starts with iGaze: Visual Attention Driven Networkingwith Smart Glasses&quot;  #博文题目</code></p>
+<p><code>date: 2014-11-21 11:25:38      #生成时间</code></p>
+<p><code>tags: Paper                    #标签, 多个标签使用格式[Paper1, Paper2, Paper3,...]</code></p>
+<p><code>---</code></p>
+<p>如果不想博文在首页全部显示, 并能出现<code>阅读全文</code>按钮效果, 需要在你想在首页显示的部分下添加<code>&lt;!--more--&gt;</code></p>
+<p><code>此处及以上的内容会在首页显示</code></p>
+<p><code>&lt;!--more--&gt;</code></p>
+<p><code>一下是在首页隐藏的部分</code></p>
+<h2 id="5-主题更改"><a href="#5-主题更改" class="headerlink" title="5. 主题更改"></a>5. 主题更改</h2><p><a href="Hexo.io">Hexo</a>提供了官网的主题, 初始化hexo时也会自动生成一个主题, Hexo还支持个性定制主题, 可以根据自己的喜好对主题进行修改, <a href="https//:github.com/hexojs/hexo/wiki/Themes">更多主题</a>可以在官网中找到</p>
+<ul>
+<li><p>个性化博客的设置</p>
+<p>  在博客的根目录下对喜爱的主题进行主题进行克隆</p>
+</li>
+</ul>
+<p><code>git clone git@github.com:yunlzheng/hexo-themes.git themes/writing</code></p>
+<p><code>#在./_config.yml，修改主题为writing</code></p>
+<p><code>theme: writing</code></p>
+<p><code>#查看本地效果</code></p>
+<p><code>hexo g       #hexo generate简写</code></p>
+<p><code>hexo s       #hexo server简写</code></p>
+<h2 id="6-部署到Github"><a href="#6-部署到Github" class="headerlink" title="6. 部署到Github"></a>6. 部署到Github</h2><p>以上内容都是在本地进行查看, 现在将博客部署到github上</p>
+<p>打开./_config.yml</p>
+<p><code># Hexo Configuration</code></p>
+<p><code>## Docs: http://hexo.io/docs/configuration.html</code></p>
+<p><code>## Source: https://github.com/hexojs/hexo/</code></p>
+<p><code># Site</code></p>
+<p><code>title: Snow Memory    #博客名</code></p>
+<p><code>subtitle: 雪忆, 如雪般单纯, 冷静思考.  #博客副标题</code></p>
+<p><code>description:          #网站描述, 用于爬虫抓取的关键词</code></p>
+<p><code>author: Andrew Liu    #作者名称</code></p>
+<p><code>email: Liu.bin.coder@gmail.com  #作者邮箱</code></p>
+<p><code>language: zh-CN       #网页编码,中文</code></p>
+<p><code># URL</code></p>
+<p><code>## If your site is put in a subdirectory, set url as &#39;http://yoursite.com/child&#39; and
+root as &#39;/child/&#39;</code></p>
+<p><code>url: http://andrewliu.tk   #用于绑定域名, 其他的不需要配置</code></p>
+<p><code>root: /</code></p>
+<p><code>permalink: :year/:month/:day/:title/</code></p>
+<p><code>tag_dir: tags</code></p>
+<p><code>archive_dir: archives</code></p>
+<p><code>category_dir: categories</code></p>
+<p><code>code_dir: downloads/code</code></p>
+<p><code>permalink_defaults:</code></p>
+<p><code># Directory</code></p>
+<p><code>source_dir: source</code></p>
+<p><code>public_dir: public</code></p>
+<p><code># Writing, 设置生成博文的默认格式,不修改</code></p>
+<p><code>new_post_name: :title.md # File name of new posts</code></p>
+<p><code>default_layout: post</code></p>
+<p><code>titlecase: false # Transform title into titlecase</code></p>
+<p><code>external_link: true # Open external links in new tab</code></p>
+<p><code>filename_case: 0</code></p>
+<p><code>render_drafts: false</code></p>
+<p><code>post_asset_folder: false</code></p>
+<p><code>relative_link: false</code></p>
+<p><code>highlight:</code></p>
+<p><code>enable: true</code></p>
+<p><code>line_number: true</code></p>
+<p><code>tab_replace:</code></p>
+<p><code># Category &amp; Tag</code></p>
+<p><code>default_category: uncategorized</code></p>
+<p><code>category_map:</code></p>
+<p><code>tag_map:</code></p>
+<p><code># Archives</code></p>
+<p><code>#Archives 默认值为2,修改为1,Archives页面就只会列出标题,而非全文</code></p>
+<p><code>## 2: Enable pagination</code></p>
+<p><code>## 1: Disable pagination</code></p>
+<p><code>## 0: Fully Disable</code></p>
+<p><code>archive: 1</code></p>
+<p><code>category: 1</code></p>
+<p><code>tag: 1</code></p>
+<p><code># Server服务器设置, 不修改</code></p>
+<p><code>## Hexo uses Connect as a server</code></p>
+<p><code>## You can customize the logger format as defined in</code></p>
+<p><code>## http://www.senchalabs.org/connect/logger.html</code></p>
+<p><code>port: 4000</code></p>
+<p><code>server_ip: localhost</code></p>
+<p><code>logger: false</code></p>
+<p><code>logger_format: dev</code></p>
+<p><code># Date / Time format 日期格式</code></p>
+<p><code>## Hexo uses Moment.js to parse and display date</code></p>
+<p><code>## You can customize the date format as defined in</code></p>
+<p><code>## http://momentjs.com/docs/#/displaying/format/</code></p>
+<p><code>date_format: MMM D YYYY</code></p>
+<p><code>time_format: H:mm:ss</code></p>
+<p><code># Pagination 分页, 设置每页显示多少篇博文</code></p>
+<p><code>## Set per_page to 0 to disable pagination</code></p>
+<p><code>per_page: 10</code></p>
+<p><code>pagination_dir: page</code></p>
+<p><code># Disqus  disqus评论,  与多说类似, 国内一般使用多说
+disqus_shortname:</code></p>
+<p><code># Extensions</code></p>
+<p><code>## Plugins: https://github.com/hexojs/hexo/wiki/Plugins</code></p>
+<p><code>## Themes: https://github.com/hexojs/hexo/wiki/Themes</code></p>
+<p><code>theme: yilia    #主题设置</code></p>
+<p><code>exclude_generator:</code></p>
+<p><code># Deployment  站点部署到github要配置这里, 非常重要</code></p>
+<p><code>## Docs: http://hexo.io/docs/deployment.html</code></p>
+<p><code>deploy:</code></p>
+<p><code>type: github    #部署类型, 本文使用Github</code></p>
+<p><code>repository: git@github.com:Andrew-liu/Andrew-liu.github.io.git  #部署的仓库的SSH</code></p>
+<p><code>branch: master   #部署分支,一般使用master主分支</code></p>
+<p><code>plugins:</code></p>
+<p><code>- hexo-generator-feed   #此插件用于RSS订阅, 以后有时间再介绍</code></p>
+<p>在配置文件中设置号部署设置后,</p>
+<p><code>hexo deploy  #进行部署</code></p>
+<p>`Initialized empty Git repository in /Users/andrew_liu/Andrew-liu.github.io/.deploy/.git/<br>[master (root-commit) bb3079b] First commit<br> 1 file changed, 0 insertions(+), 0 deletions(-)<br> create mode 100644 placeholder<br>[info] Clearing .deploy folder…<br>[info] Copying files from public folder…<br>[master 6e24e8d] Site updated: 2014-11-21 11:16:23<br> 172 files changed, 34969 insertions(+)<br> create mode 100644 2014/09/08/Hello-World/index.html<br> …<br> create mode 100644 “tags/\345\277\203\350\267\257\346\234\255\350\256\260/index.html”<br>To git@github.com:Andrew-liu/Andrew-liu.github.io.git</p>
+<ul>
+<li>11237d0…6e24e8d master -&gt; master (forced update)<br>Branch master set up to track remote branch master from git@github.com:Andrew-liu/Andrew-liu.github.io.git.`</li>
+</ul>
+<p><code>[info] Deploy done: github</code></p>
+<p><code>#表示部署成功</code></p>
+<p>可以使用<code>Github用户名.github.io</code>进行访问, 或者设置个性域名</p>
+<p>文／Andrew_liu（简书作者）<br>原文链接：<a href="http://www.jianshu.com/p/858ecf233db9" target="_blank" rel="external">http://www.jianshu.com/p/858ecf233db9</a><br>著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。</p>
+
       
     </div>
     <footer class="article-footer">
