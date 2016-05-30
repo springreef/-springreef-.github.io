@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>莹为有你</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*认识你,</span><br />
+			<span class="space"/><span class="comments">*从此时间只分为，</span><br />
+			<span class="space"/><span class="comments">*认识你之前与认识你之后,</span><br />
+			<span class="space"/><span class="comments">*2016-04-17.</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> Tian<br />
+			Girl name = <span class="keyword">Mrs</span> Wei<br />
+			<span class="comments">// Fall in love river. </span><br />
+			The boy love the girl;<br />
+			<span class="comments">// They love each other.</span><br />
+			The girl loved the boy;<br />
+			<span class="comments">// AS time goes on.one day girl asked:</span><br />
+			When did you start to like me?<br/>
+			I don't remember.<br/>
+			But,why is me?<br/>
+			Why not you?<br/>
+			I'm stingy, also quiet.<br/>
+			Me too.<br/>
+			I didn't have any experience before, I do not know what love is?<br/>
+			I don't know either。 But I know... As thought of i can spend the rest of your life with you, I'm looking forward to the rest of my life.<br/>
+			<span class="comments">// May be it is all,you feel good,i feel good too. </span><br />
+			I want to say:<br />
+			Baby, I'll always be with you,by your side evermore.<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					魏莹莹，这是我们在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					陪你直到永永远远。<br/>
+					<div class="signature">- Mr.Tian</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 3, 17);
+together.setHours(21);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+<p>爱是陪伴是细水长流。</p>
+</div>
+</body>
+</html>
