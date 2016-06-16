@@ -4,21 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hello World | Tianjia’s Blog</title>
+  <title>创建与合并分支 | Tianjia’s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch &amp;lt;name&amp;gt;
+切换分支：git checkout &amp;lt;name&amp;gt;
+创建+切换分支：git checkout -b &amp;lt;name&amp;gt;
+合并某分支到当前分支：git merge &amp;lt;name&amp;gt;
+删除分支：git branch -d &amp;lt;name&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/05/23/hello-world/index.html">
+<meta property="og:title" content="创建与合并分支">
+<meta property="og:url" content="http://yoursite.com/2016/06/16/创建与合并分支/index.html">
 <meta property="og:site_name" content="Tianjia’s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-05-29T15:35:16.000Z">
+<meta property="og:description" content="Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch &amp;lt;name&amp;gt;
+切换分支：git checkout &amp;lt;name&amp;gt;
+创建+切换分支：git checkout -b &amp;lt;name&amp;gt;
+合并某分支到当前分支：git merge &amp;lt;name&amp;gt;
+删除分支：git branch -d &amp;lt;name&amp;gt;">
+<meta property="og:updated_time" content="2016-06-16T04:46:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="创建与合并分支">
+<meta name="twitter:description" content="Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch &amp;lt;name&amp;gt;
+切换分支：git checkout &amp;lt;name&amp;gt;
+创建+切换分支：git checkout -b &amp;lt;name&amp;gt;
+合并某分支到当前分支：git merge &amp;lt;name&amp;gt;
+删除分支：git branch -d &amp;lt;name&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="Tianjia’s Blog" type="application/atom+xml">
   
@@ -196,11 +211,11 @@ Quick">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-创建与合并分支" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/23/hello-world/" class="article-date">
-  	<time datetime="2016-05-22T16:59:25.000Z" itemprop="datePublished">2016-05-23</time>
+      <a href="/2016/06/16/创建与合并分支/" class="article-date">
+  	<time datetime="2016-06-16T04:43:45.000Z" itemprop="datePublished">2016-06-16</time>
 </a>
     </div>
   
@@ -213,7 +228,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      创建与合并分支
     </h1>
   
 
@@ -221,6 +236,10 @@ Quick">
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分支/">分支</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -229,16 +248,13 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>Git鼓励大量使用分支：</p>
+<p>查看分支：<code>git branch</code></p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout &lt;name&gt;</code></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
 
       
     </div>
@@ -248,15 +264,11 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2016/05/26/hexo添加博文/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hexo添加博文
-        
-      </div>
-    </a>
   
+    <a href="/2016/06/16/快排Quiksort/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">快排Quiksort</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -300,7 +312,7 @@ Quick">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hello-world" data-title="Hello World" data-url="http://yoursite.com/2016/05/23/hello-world/"></div>
+	<div class="ds-thread" data-thread-key="创建与合并分支" data-title="创建与合并分支" data-url="http://yoursite.com/2016/06/16/创建与合并分支/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
