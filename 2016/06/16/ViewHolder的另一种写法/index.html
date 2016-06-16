@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>GitHub 优秀的 Android 开源项目 | Tianjia’s Blog</title>
+  <title>ViewHolder的另一种写法 | Tianjia’s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="地址：http://www.cnblogs.com/hawkon/p/3593709.html">
+  <meta name="description" content="最标准的写法，就是为每一个AdapterView的子View新建一个对应的ViewHolder，同时声明为prtivate final static。12345private final static class ViewHolder&amp;#123;    TextView name;    TextView age;    TextView sex;&amp;#125;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub 优秀的 Android 开源项目">
-<meta property="og:url" content="http://yoursite.com/2016/06/16/GitHub 优秀的 Android 开源项目/index.html">
+<meta property="og:title" content="ViewHolder的另一种写法">
+<meta property="og:url" content="http://yoursite.com/2016/06/16/ViewHolder的另一种写法/index.html">
 <meta property="og:site_name" content="Tianjia’s Blog">
-<meta property="og:description" content="地址：http://www.cnblogs.com/hawkon/p/3593709.html">
-<meta property="og:updated_time" content="2016-06-16T05:00:55.000Z">
+<meta property="og:description" content="最标准的写法，就是为每一个AdapterView的子View新建一个对应的ViewHolder，同时声明为prtivate final static。12345private final static class ViewHolder&amp;#123;    TextView name;    TextView age;    TextView sex;&amp;#125;">
+<meta property="og:updated_time" content="2016-06-16T05:13:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GitHub 优秀的 Android 开源项目">
-<meta name="twitter:description" content="地址：http://www.cnblogs.com/hawkon/p/3593709.html">
+<meta name="twitter:title" content="ViewHolder的另一种写法">
+<meta name="twitter:description" content="最标准的写法，就是为每一个AdapterView的子View新建一个对应的ViewHolder，同时声明为prtivate final static。12345private final static class ViewHolder&amp;#123;    TextView name;    TextView age;    TextView sex;&amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="Tianjia’s Blog" type="application/atom+xml">
   
@@ -193,11 +193,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-GitHub 优秀的 Android 开源项目" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ViewHolder的另一种写法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/16/GitHub 优秀的 Android 开源项目/" class="article-date">
-  	<time datetime="2016-06-16T04:59:16.000Z" itemprop="datePublished">2016-06-16</time>
+      <a href="/2016/06/16/ViewHolder的另一种写法/" class="article-date">
+  	<time datetime="2016-06-16T05:11:10.000Z" itemprop="datePublished">2016-06-16</time>
 </a>
     </div>
   
@@ -210,7 +210,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      GitHub 优秀的 Android 开源项目
+      ViewHolder的另一种写法
     </h1>
   
 
@@ -218,10 +218,6 @@
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源项目/">开源项目</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -230,7 +226,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>地址：<a href="http://www.cnblogs.com/hawkon/p/3593709.html" target="_blank" rel="external">http://www.cnblogs.com/hawkon/p/3593709.html</a></p>
+        <p>最标准的写法，就是为每一个AdapterView的子View新建一个对应的ViewHolder，同时声明为prtivate final static。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span></span>&#123;</span><br><span class="line">    TextView name;</span><br><span class="line">    TextView age;</span><br><span class="line">    TextView sex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>这样的话，每次新建BaseAdapter都得新增加ViewHolder，略显麻烦。下面介绍一种惬意的书写方法，等价于官方推荐的做法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span></span>&#123;</span><br><span class="line">	<span class="comment">//I added a generic return type to reduce the casting noise in client code</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;T extends View&gt;<span class="function">T <span class="title">get</span><span class="params">(View view,<span class="keyword">int</span> id)</span></span>&#123;</span><br><span class="line">		SparseArray&lt;View&gt; viewHolder = (SparseArray&lt;View&gt;)view.getTag();</span><br><span class="line">		<span class="keyword">if</span>(viewHolder == <span class="keyword">null</span>)&#123;</span><br><span class="line">			viewHolder = <span class="keyword">new</span> SparseArray&lt;View&gt;();</span><br><span class="line">			view.setTag(viewHolder);</span><br><span class="line">		&#125;</span><br><span class="line">		View childView = viewHolder.get(id);</span><br><span class="line">		<span class="keyword">if</span>(childView == <span class="keyword">null</span>)&#123;</span><br><span class="line">			childView = view.findViewById(id);</span><br><span class="line">			viewHolder.put(id,childView);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> (T)childView;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后就是在BaseAdapter的getView中使用。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">int</span> position,View convertView,ViewGroup parent)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(convertView == <span class="keyword">null</span>)&#123;</span><br><span class="line">		convertView = mInflater.inflate(R.layout.item_hotel_list,parent,<span class="keyword">false</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	ImageView img = ViewHolder.get(convertView,R.id.item_hotel_list_img);</span><br><span class="line">	<span class="keyword">return</span> convertView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -240,18 +239,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/16/ViewHolder的另一种写法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          ViewHolder的另一种写法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/16/picasso使用简要说明/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">picasso使用简要说明</div>
+    <a href="/2016/06/16/GitHub 优秀的 Android 开源项目/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GitHub 优秀的 Android 开源项目</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -297,7 +287,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="GitHub 优秀的 Android 开源项目" data-title="GitHub 优秀的 Android 开源项目" data-url="http://yoursite.com/2016/06/16/GitHub 优秀的 Android 开源项目/"></div>
+	<div class="ds-thread" data-thread-key="ViewHolder的另一种写法" data-title="ViewHolder的另一种写法" data-url="http://yoursite.com/2016/06/16/ViewHolder的另一种写法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
