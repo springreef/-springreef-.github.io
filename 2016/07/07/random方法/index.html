@@ -4,27 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>hexo博客使用本地图片 | Tianjia’s Blog</title>
+  <title>random方法 | Tianjia’s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="环境配置首先修改 _config.yml 中的 post_asset_folder属性 。
-1post_asset_folder:true
-在博客目录，执行
-1npm install https://github.com/CodeFalling/hexo-asset-image --save">
+  <meta name="description" content="假设你希望产生位于0到某个上界之间的随机整数。面对这个常见的任务，许多程序员会编写出如下所示的方法：
+123456private static final Random rnd = new Random();//Common but deeply flawed!static int random(int n)&amp;#123;  return Math.abs(rnd.nextInt())%n;&amp;#12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客使用本地图片">
-<meta property="og:url" content="http://yoursite.com/2016/05/30/hexo博客使用本地图片/index.html">
+<meta property="og:title" content="random方法">
+<meta property="og:url" content="http://yoursite.com/2016/07/07/random方法/index.html">
 <meta property="og:site_name" content="Tianjia’s Blog">
-<meta property="og:description" content="环境配置首先修改 _config.yml 中的 post_asset_folder属性 。
-1post_asset_folder:true
-在博客目录，执行
-1npm install https://github.com/CodeFalling/hexo-asset-image --save">
-<meta property="og:updated_time" content="2016-05-30T02:51:42.000Z">
+<meta property="og:description" content="假设你希望产生位于0到某个上界之间的随机整数。面对这个常见的任务，许多程序员会编写出如下所示的方法：
+123456private static final Random rnd = new Random();//Common but deeply flawed!static int random(int n)&amp;#123;  return Math.abs(rnd.nextInt())%n;&amp;#12">
+<meta property="og:updated_time" content="2016-07-07T11:47:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客使用本地图片">
-<meta name="twitter:description" content="环境配置首先修改 _config.yml 中的 post_asset_folder属性 。
-1post_asset_folder:true
-在博客目录，执行
-1npm install https://github.com/CodeFalling/hexo-asset-image --save">
+<meta name="twitter:title" content="random方法">
+<meta name="twitter:description" content="假设你希望产生位于0到某个上界之间的随机整数。面对这个常见的任务，许多程序员会编写出如下所示的方法：
+123456private static final Random rnd = new Random();//Common but deeply flawed!static int random(int n)&amp;#123;  return Math.abs(rnd.nextInt())%n;&amp;#12">
   
     <link rel="alternative" href="/atom.xml" title="Tianjia’s Blog" type="application/atom+xml">
   
@@ -203,11 +197,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hexo博客使用本地图片" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-random方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/30/hexo博客使用本地图片/" class="article-date">
-  	<time datetime="2016-05-29T16:04:14.000Z" itemprop="datePublished">2016-05-30</time>
+      <a href="/2016/07/07/random方法/" class="article-date">
+  	<time datetime="2016-07-07T06:15:01.000Z" itemprop="datePublished">2016-07-07</time>
 </a>
     </div>
   
@@ -220,7 +214,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo博客使用本地图片
+      random方法
     </h1>
   
 
@@ -229,7 +223,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/本地图片/">本地图片</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Effective-Java/">Effective Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 	</div>
 
         
@@ -240,25 +234,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>首先修改 _config.yml 中的 post_asset_folder属性 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder:true</span><br></pre></td></tr></table></figure>
-<p>在博客目录，执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="使用本地图片"><a href="#使用本地图片" class="headerlink" title="使用本地图片"></a>使用本地图片</h2><p>在博客目录执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;article_name&quot;</span><br></pre></td></tr></table></figure>
-<p>对应会在source目录下建立名字为article_name的目录和一个article_name.md文件，我们在文件里面添加三个图片，结构如下图所示</p>
-<blockquote>
-<p>article_name</p>
-<p>├── p1.jpg</p>
-<p>├── p2.jpg</p>
-<p>└── p3.jpg</p>
-<p>article_name.md</p>
-</blockquote>
-<p>使用的时候只用在代码中添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片1](article_name/p1.jpg)</span><br></pre></td></tr></table></figure>
-<p>即可在编辑器中预览图片效果，同时在生成网页发布时候会智能的替换为</p>
-<p><code>&lt;img src=&quot;/2016/04/15/article_name/p1.jpg&quot; alt=&quot;图片1&quot;\&gt;</code></p>
+        <p>假设你希望产生位于0到某个上界之间的随机整数。面对这个常见的任务，许多程序员会编写出如下所示的方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Random rnd = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line"><span class="comment">//Common but deeply flawed!</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">random</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Math.abs(rnd.nextInt())%n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法看起来不错，但是却有三个缺点：</p>
+<ol>
+<li>如果n是一个比较小的2的乘方，经过一段相当短的周期之后，它产生的随机数序列将会重复。</li>
+</ol>
+<ul>
+<li>如果n不是2的乘方，那么平均起来，有些数会比其他的数出现得更为频繁。如果n比较大，这个缺点将会非常明显。</li>
+<li>在极少数情况下，它的失败是灾难性的，返回一个落在指定范围之外的数。</li>
+</ul>
+<p>第二条用代码可以检测改缺点，如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Random rd = <span class="keyword">new</span> Random();</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">random</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> Math.abs(rd.nextInt())%n;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span><br><span class="line">	 * <span class="doctag">@param</span> args</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">int</span> n = <span class="number">2</span>*(Integer.MAX_VALUE/<span class="number">3</span>);</span><br><span class="line">		<span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(random(n)&lt;n/<span class="number">2</span>) low++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(low);</span><br><span class="line">		System.out.println(((<span class="keyword">float</span>)low/<span class="number">1000000</span>)*<span class="number">100</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>直接使用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不带种子的随机函数，每一次运行的得到的序列都是随机的</span></span><br><span class="line">Random rm =<span class="keyword">new</span> Random();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">  System.out.println(rm.nextInt(<span class="number">10</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//带种子的随你函数，每次运行产生的序列都是相同的</span></span><br><span class="line">Random rm =<span class="keyword">new</span> Random(<span class="number">25</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">  System.out.println(rm.nextInt(<span class="number">10</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -268,18 +255,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/30/Hexo博客添加多说插件/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hexo博客添加多说插件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/29/Hexo修改主题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo修改主题</div>
+    <a href="/2016/06/16/ViewHolder的另一种写法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ViewHolder的另一种写法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -325,7 +303,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo博客使用本地图片" data-title="hexo博客使用本地图片" data-url="http://yoursite.com/2016/05/30/hexo博客使用本地图片/"></div>
+	<div class="ds-thread" data-thread-key="random方法" data-title="random方法" data-url="http://yoursite.com/2016/07/07/random方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
